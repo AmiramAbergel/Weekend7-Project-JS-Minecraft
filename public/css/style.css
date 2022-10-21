@@ -26,6 +26,13 @@ body {
     min-height: 100vh;
 }
 
+#game-board {
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+
 .side-bar {
     width: 20%;
     flex-direction: column;
@@ -43,8 +50,6 @@ body {
     justify-content: space-around;
 }
 .main {
-    width: 80%;
-    justify-content: center;
 }
 
 .hidden {

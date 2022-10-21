@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Minecraft</title>
+        <link rel="stylesheet" href="public/css/Normalize.css" />
         <link rel="stylesheet" href="public/css/style.css" />
         <link rel="stylesheet" href="public/css/utilities.css" />
+        <link rel="stylesheet" href="public/css/mobile.css" />
     </head>
     <body>
         <!----------------------- landPage ----------------------->
-
-        <!----------------------- minecraftGameBoard ----------------------->
         <div class="landPage">
             <div class="boxDialog flex-items">
                 <h1 id="text">Welcome Minecraft</h1>
@@ -20,6 +20,7 @@
                 </button>
             </div>
         </div>
+        <!----------------------- minecraftGameBoard ----------------------->
         <div class="gameContainer hidden">
             <div id="game-board" class="main flex-items"></div>
             <aside class="side-bar flex-items">
@@ -38,7 +39,6 @@
                 <button id="reset" class="text-primary btn">Reset Game</button>
             </aside>
         </div>
-
-        <script type="text/javascript" src="app/app.js"></script>
+        <script src="app/app.js" defer type="module"></script>
     </body>
 </html>

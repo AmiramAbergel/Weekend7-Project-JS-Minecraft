@@ -6,9 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Minecraft</title>
         <link rel="stylesheet" href="public/css/style.css" />
+        <link rel="stylesheet" href="public/css/utilities.css" />
     </head>
     <body>
-        <div id="game-board"></div>
+        <!----------------------- landPage ----------------------->
+
+        <!----------------------- minecraftGameBoard ----------------------->
+        <div class="landPage">
+            <div class="boxDialog flex-items">
+                <h1 id="text">Welcome Minecraft</h1>
+                <button id="start" class="text-primary btn">
+                    Start New Game
+                </button>
+            </div>
+        </div>
+        <div class="hidden">
+            <div id="game-board" class="main"></div>
+            <aside class="side-bar">
+                <ul>
+                    <li><a href="#autopilot" data-content="AUTOPILOT"></a></li>
+                    <li><a href="#interior" data-content="INTERIOR"></a></li>
+                    <li><a href="#specs" data-content="SPECS"></a></li>
+                    <li><a href="#order" data-content="ORDER"></a></li>
+                </ul>
+            </aside>
+        </div>
+
         <script type="text/javascript" src="app/app.js"></script>
     </body>
 </html>

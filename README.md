@@ -2,9 +2,7 @@
 
 # /app - contains your compiled JavaScript
 
-# /public - contains all static content (images, style-sheets, client-side JavaScrip
-
-# public/app - contains your compiled JavaScript
+# /public - contains all static content (images, style-sheets, client-side JavaScrip)
 
 # public/assets/images - contains image files
 

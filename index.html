@@ -20,15 +20,22 @@
                 </button>
             </div>
         </div>
-        <div class="hidden">
-            <div id="game-board" class="main"></div>
-            <aside class="side-bar">
-                <ul>
-                    <li><a href="#autopilot" data-content="AUTOPILOT"></a></li>
-                    <li><a href="#interior" data-content="INTERIOR"></a></li>
-                    <li><a href="#specs" data-content="SPECS"></a></li>
-                    <li><a href="#order" data-content="ORDER"></a></li>
-                </ul>
+        <div class="gameContainer hidden">
+            <div id="game-board" class="main flex-items"></div>
+            <aside class="side-bar flex-items">
+                <div class="toolsContainer flex-items">
+                    <div class="box axe">axe</div>
+                    <div class="box pickaxe">pickaxe</div>
+                    <div class="box shovel">shovel</div>
+                </div>
+                <div class="inventoryContainer flex-items">
+                    <div class="box axe">grass</div>
+                    <div class="box pickaxe">rock</div>
+                    <div class="box shovel">soil</div>
+                    <div class="box axe">tree</div>
+                    <div class="box pickaxe">leaves</div>
+                </div>
+                <button id="reset" class="text-primary btn">Reset Game</button>
             </aside>
         </div>
 

@@ -70,6 +70,7 @@ h1 {
     align-items: center;
 }
 /* Tile items */
+
 .cloud-tile {
     background: var(--bgCloudTile);
 }
@@ -100,4 +101,9 @@ h1 {
 }
 .shovel-tool {
     background: var(--bgShovelTool);
+}
+
+/* Inventory */
+.inActiveTile {
+    visibility: hidden;
 }

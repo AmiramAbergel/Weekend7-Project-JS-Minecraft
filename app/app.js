@@ -7,42 +7,48 @@ import * as tiles from "../public/js/tiles.js";
 const startBtn = document.querySelector("#start");
 startBtn.addEventListener("click", handleStart);
 //main
-const gameBoard = document.getElementById("game-board");
+export const gameBoard = document.getElementById("game-board");
 function main() {}
 draw(northWorld, gameBoard);
 //
 export const minecraftWorld = {
     selectedTool: "", //arr
+    appendTile: "",
     tools: {
         "axe-tool": ["tree-tile", "tree-leaves-tile"],
         "pickaxe-tool": ["rock-tile"],
         "shovel-tool": ["soil-tile", "grass-tile"],
     },
-    currentTile: "",
-    inventory: [],
+    inventory: {
+        status: "inActive",
+        "grass-tile": {
+            var: tiles.grassTile,
+            count: 0,
+            active: false,
+        },
+        "rock-tile": {
+            var: tiles.rockTile,
+            count: 0,
+            active: false,
+        },
+        "soil-tile": {
+            var: tiles.soilTile,
+            count: 0,
+            active: false,
+        },
+        "tree-tile": {
+            var: tiles.treeTile,
+            count: 0,
+            active: false,
+        },
+        "tree-leaves-tile": {
+            var: tiles.treeLTile,
+            count: 0,
+            active: false,
+        },
+    },
 };
 //
-export const checkTiles = (classList) => {
-    const input = classList;
-    let res = "";
-    if (input.contains("grass-tile")) {
-        return (res = "grass-tile");
-        // applyingTiles("grass-tile");
-    } else if (input.contains("rock-tile")) {
-        return (res = "rock-tile");
-        //applyingTiles("rock-tile");
-    } else if (input.contains("soil-tile")) {
-        return (res = "soil-tile");
-        // applyingTiles("soil-tile");
-    } else if (input.contains("tree-tile")) {
-        return (res = "tree-tile");
-        // applyingTiles("tree-tile");
-    } else if (input.contains("tree-leaves-tile")) {
-        return (res = "tree-leaves-tile");
-
-        //applyingTiles("tree-leaves-tile");
-    }
-};
 
 //
 const handleBoard = (event) => {
@@ -50,12 +56,35 @@ const handleBoard = (event) => {
     const boardClassList = input.classList;
     const world = minecraftWorld;
     const currentTool = world.selectedTool;
-    const targetTile = checkTiles(boardClassList);
-    for (let i = 0; i < currentTool.length; i++) {
-        console.log(currentTool[0]);
-        if (targetTile === currentTool[i]) {
-            boardClassList.remove(targetTile);
+    const appendTile = world.appendTile;
+    const appendTileObj = world.inventory[appendTile];
+    const selectedTile = tiles.checkTiles(boardClassList); //selectedTile-name str!
+    const selectedTileObj = world.inventory[selectedTile];
+    console.dir(selectedTileObj);
+    if (currentTool !== "") {
+        for (let i = 0; i < currentTool.length; i++) {
+            if (selectedTile === currentTool[i]) {
+                boardClassList.remove(selectedTile);
+                if (selectedTileObj.count === 0) {
+                    selectedTileObj.var.classList.remove("inActiveTile");
+                }
+                selectedTileObj.count++;
+                console.log(selectedTile, selectedTileObj.count);
+            }
+        }
+    } else if (
+        currentTool === "" &&
+        world.inventory.status === "active" &&
+        boardClassList.length === 0
+    ) {
+        if (appendTileObj.count > 0) {
+            appendTileObj.count--;
+            boardClassList.add(appendTile);
+            if (appendTileObj.count === 0) {
+                world.inventory.status = "inActive";
+                appendTileObj.var.classList.add("inActiveTile");
+            }
         }
     }
 };
-gameBoard.addEventListener("click", handleBoard);
+gameBoard.addEventListener("mousedown", handleBoard);

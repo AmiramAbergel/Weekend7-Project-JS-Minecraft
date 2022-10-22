@@ -41,3 +41,29 @@ h1 {
     text-align: center;
     align-items: center;
 }
+
+.cloud-tile {
+    background: url("../assets/img/tiles/cloud.png") no-repeat center
+        center/cover;
+}
+.grass-tile {
+    background: url("../assets/img/tiles/grass.webp") no-repeat center
+        center/cover;
+}
+.rock-tile {
+    background: url("../assets/img/tiles/rock.png") no-repeat center
+        center/cover;
+}
+.soil-tile {
+    background: url("../assets/img/tiles/soil.webp") no-repeat center
+        center/cover;
+}
+.tree-tile {
+    background: url("../assets/img/tiles/tree.png") no-repeat center
+        center/cover;
+}
+
+.tree-leaves-tile {
+    background: url("../assets/img/tiles/tree-leaves.png") no-repeat center
+        center/cover;
+}

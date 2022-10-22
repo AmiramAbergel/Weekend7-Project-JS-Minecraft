@@ -35,13 +35,18 @@ h1 {
 .box:hover {
     opacity: 0.4;
 }
+
+.boxTitle > p {
+    position: relative;
+    left: 2.5rem;
+}
 /* Flex items */
 .flex-items {
     display: flex;
     text-align: center;
     align-items: center;
 }
-
+/* Tile items */
 .cloud-tile {
     background: url("../assets/img/tiles/cloud.png") no-repeat center
         center/cover;
@@ -65,5 +70,19 @@ h1 {
 
 .tree-leaves-tile {
     background: url("../assets/img/tiles/tree-leaves.png") no-repeat center
+        center/cover;
+}
+
+/* Tools items */
+
+.axe-tool {
+    background: url("../assets/img/tools/axe.png") no-repeat center center/cover;
+}
+.pickaxe-tool {
+    background: url("../assets/img/tools/pickaxe.png") no-repeat center
+        center/cover;
+}
+.shovel-tool {
+    background: url("../assets/img/tools/shovel.png") no-repeat center
         center/cover;
 }

@@ -1,3 +1,12 @@
+const minecraftWorld = {
+    tools: {
+        axe: ["tree", "leaf"],
+        shovel: ["dirt", "grass"],
+        pickaxe: ["rock"],
+    },
+    inventory: [],
+};
+
 /**
  * @description
  * @param {}

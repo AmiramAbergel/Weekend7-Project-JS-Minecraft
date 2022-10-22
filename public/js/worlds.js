@@ -1,9 +1,3 @@
-const minecraftWorld = {
-    tools: {
-        axe: ["tree", "leaf"],
-    },
-};
-
 export const northWorld = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],

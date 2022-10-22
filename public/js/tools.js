@@ -1,3 +1,6 @@
+const axeTool = document.querySelector("");
+const pickaxeTool = document.querySelector("");
+const shovelTool = document.querySelector("");
 /**
  * @description
  * @param {Object} Obj

@@ -1,3 +1,26 @@
+:root {
+    /* Tile backgrounds */
+    --bgCloudTile: url("../assets/img/tiles/cloud.png") no-repeat center
+        center/cover;
+    --bgGrassTile: url("../assets/img/tiles/grass.webp") no-repeat center
+        top/cover;
+    --bgRockTile: url("../assets/img/tiles/rock.png") no-repeat center
+        center/cover;
+    --bgSoilTile: url("../assets/img/tiles/soil.webp") no-repeat center
+        center/cover;
+    --bgTreeTile: url("../assets/img/tiles/tree.png") no-repeat center
+        center/cover;
+    --bgTreeLTile: url("../assets/img/tiles/tree-leaves.png") no-repeat center
+        center/cover;
+    /* Tools backgrounds */
+    --bgAxeTool: url("../assets/img/tools/axe.png") no-repeat center
+        center/cover;
+    --bgPickaxeTool: url("../assets/img/tools/pickaxe.png") no-repeat center
+        center/cover;
+    --bgShovelTool: url("../assets/img/tools/shovel.png") no-repeat center
+        center/cover;
+}
+
 h1 {
     font-size: 100px;
 }
@@ -48,41 +71,33 @@ h1 {
 }
 /* Tile items */
 .cloud-tile {
-    background: url("../assets/img/tiles/cloud.png") no-repeat center
-        center/cover;
+    background: var(--bgCloudTile);
 }
 .grass-tile {
-    background: url("../assets/img/tiles/grass.webp") no-repeat center
-        center/cover;
+    background: var(--bgGrassTile);
 }
 .rock-tile {
-    background: url("../assets/img/tiles/rock.png") no-repeat center
-        center/cover;
+    background: var(--bgRockTile);
 }
 .soil-tile {
-    background: url("../assets/img/tiles/soil.webp") no-repeat center
-        center/cover;
+    background: var(--bgSoilTile);
 }
 .tree-tile {
-    background: url("../assets/img/tiles/tree.png") no-repeat center
-        center/cover;
+    background: var(--bgTreeTile);
 }
 
 .tree-leaves-tile {
-    background: url("../assets/img/tiles/tree-leaves.png") no-repeat center
-        center/cover;
+    background: var(--bgTreeLTile);
 }
 
 /* Tools items */
 
 .axe-tool {
-    background: url("../assets/img/tools/axe.png") no-repeat center center/cover;
+    background: var(--bgAxeTool);
 }
 .pickaxe-tool {
-    background: url("../assets/img/tools/pickaxe.png") no-repeat center
-        center/cover;
+    background: var(--bgPickaxeTool);
 }
 .shovel-tool {
-    background: url("../assets/img/tools/shovel.png") no-repeat center
-        center/cover;
+    background: var(--bgShovelTool);
 }

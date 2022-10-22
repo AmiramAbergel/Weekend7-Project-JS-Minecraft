@@ -1,27 +1,19 @@
+import { minecraftWorld } from "../../app/app.js";
 const grassTile = document.querySelector(
-    "side-bar inventoryContainer grass-tile"
+    ".side-bar .inventoryContainer .grass-tile"
 );
 const rockTile = document.querySelector(
-    "side-bar inventoryContainer rock-tile"
+    ".side-bar .inventoryContainer .rock-tile"
 );
 const soilTile = document.querySelector(
-    "side-bar inventoryContainer soil-tile"
+    ".side-bar .inventoryContainer .soil-tile"
 );
 const treeTile = document.querySelector(
-    "side-bar inventoryContainer tree-tile"
+    ".side-bar .inventoryContainer .tree-tile"
 );
 const treeLTile = document.querySelector(
-    "side-bar inventoryContainer treeL-tile"
+    ".side-bar .inventoryContainer .treeL-tile"
 );
-
-const minecraftWorld = {
-    tools: {
-        axe: ["tree", "leaf"],
-        shovel: ["dirt", "grass"],
-        pickaxe: ["rock"],
-    },
-    inventory: [],
-};
 
 /**
  * @description
@@ -33,4 +25,27 @@ export const storeTiles = () => {};
  * @description
  * @param {}
  */
-export const applyingTiles = () => {};
+export const applyingTiles = (str) => {
+    const toolsObj = minecraftWorld.tools;
+};
+
+/**
+ * @description
+ * @param {}
+ */
+export const checkTiles = (event) => {
+    const input = event.target;
+    let res = "";
+    if (input.classList.contains("grass-tile")) {
+        return (res = "grass-tile");
+        // applyingTiles("grass-tile");
+    } else if (input.classList.contains("rock-tile")) {
+        //applyingTiles("rock-tile");
+    } else if (input.classList.contains("soil-tile")) {
+        // applyingTiles("soil-tile");
+    } else if (input.classList.contains("tree-tile")) {
+        // applyingTiles("tree-tile");
+    } else if (input.classList.contains("tree-leaves-tile")) {
+        //applyingTiles("tree-leaves-tile");
+    }
+};

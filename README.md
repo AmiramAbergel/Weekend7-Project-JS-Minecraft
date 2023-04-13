@@ -3,6 +3,11 @@
 This project is a simple Minecraft-like game implemented in JavaScript, HTML, and CSS.
 #### Demo: https://amazing-squirrel-2c70dc.netlify.app/
 
+## Screenshot
+<img src="https://user-images.githubusercontent.com/39462161/231778466-b00c88db-5b9c-4a10-a6df-72cb7b2cead4.png" alt="Screenshot 2023-04-13 164151" width="900">
+<img src="https://user-images.githubusercontent.com/39462161/231778444-c17a3f50-c372-4986-984a-0718a64122ef.png" alt="Screenshot 2023-04-13 164447" width="900">
+
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
